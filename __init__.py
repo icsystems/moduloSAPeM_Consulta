@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 import django.views.static as static
 
-name = 'Consulta'
+name = 'Consulta Implementação'
 version = 'v1.0.0'
 
 def handle_request(request, fileName):

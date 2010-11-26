@@ -105,9 +105,8 @@ $(document).ready(function(){
 		var fichaId = urlArray[urlArray.length-2];
 		var url = urlbase + 'ficha/' + fichaId + '/';
 	}else{
-		var numPaciente = urlArray[urlArray.length-2];
-		var numForm = urlArray[urlArray.length-3] - 1;
-		var url = urlbase + 'patientLastRegister/' + numForm + '/' + numPaciente + '/';
+		var fichaId = urlArray[urlArray.length-2];
+		var url = urlbase + 'patientLastRegisterByType/' + fichaId + '/FollowUp/';
 	}
 	$.ajax({
 		type: 'POST',

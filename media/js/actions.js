@@ -47,6 +47,18 @@
 	};
 })(jQuery);
 
+//Make a clock
+function getTime(){
+	var time = new Date();
+	var hours = time.getHours();
+	if (hours.toString().length == 1)
+		hours = '0' + hours;
+	var minutes = time.getMinutes();
+	if (minutes.toString().length == 1)
+		minutes = '0' + minutes;
+	var timeStr = hours+':'+minutes;
+	return timeStr;
+}
 function getScrollXY() {
 	var myWidth = 0, myHeight = 0;
 		if( typeof( window.innerWidth ) == 'number' ) {
@@ -401,6 +413,14 @@ $(document).ready(function(){
 		else if ($(this).val()=='nao')
 			$().hideFields(dep);
 	});
+/*---------------------------------------------------------------------------------------------------------*/
+	//Make a clock in the page e write date in
+	//a portuguese format
+	$('#form_consulta').submit(function(){
+		$('#horarioFimEntrevista').val(getTime());
+	});
+	$('#horarioInicioEntrevista').val(getTime());
+/*---------------------------------------------------------------------------------------------------------*/
 
 	$('div.secondary').css('display', 'none');
 

@@ -22,6 +22,12 @@
 	<div id='maincontent'>
 	<form id='form_consulta' id='form_consulta' action='cgi-bin/submitForm.py' method='POST'>
 		<fieldset>
+				<div id='divHorarioInicioEntrevista' class='primary required'>
+					<label for='horarioInicioEntrevista'> Horário do Inicio da entrevista: </label>
+					<input type='text' name='horarioInicioEntrevista' id='horarioInicioEntrevista' size='6' maxlength='6' readonly/>
+				</div>
+		</fieldset>
+		<fieldset>
 			<legend>RX de T&oacute;rax</legend>
 			<div id='divCavitacao' class='primary required'>
 				<label for='cavitacao'> Cavitaç&atilde;o:</label>
@@ -211,6 +217,13 @@
 				<label for='dataConsulta'>Data da Consulta: </label>
 				<input id='dataConsulta' name='dataConsulta' size='50' class='required' disabled />
 			</div>
+				<div id='divHorarioFimEntrevista' class='primary required'>
+					<label for='horarioFimEntrevista'> Horário do fim da entrevista: </label>
+					<input type='text' name='horarioFimEntrevista' id='horarioFimEntrevista' size='6' maxlength='6' readonly/>
+				</div>
+				<div id='fraseAjudaHorario'>
+					<p>O horário do fim da entrevista será preenchido automaticamente ao clicar no botão "Enviar Formulário."</p><br />
+				</div>
 			<div id='divAvaliador' name='divAvaliador' class='primary required'>
 				<label for='avaliador'>Avaliado por: </label>
 				<input id='avaliador' name='avaliador' class='required'/>

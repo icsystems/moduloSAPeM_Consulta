@@ -197,4 +197,6 @@ form div small {
 	font-size: 88%;
 	zoom: 1;
 }
-
+form div label.error{
+	color:red;
+}

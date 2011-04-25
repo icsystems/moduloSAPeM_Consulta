@@ -309,6 +309,22 @@ $(document).ready(function(){
 		yearRange : '-130:+130',
 		dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S']
 	});
+	$('#rx').change(function(){
+		var dep = new Array();
+		dep[0] = '#divCavitacao';
+		dep[1] = '#divPadrao';
+		dep[2] = '#divProbabilidadeTBAtivaAposEstudoRX';
+		dep[3] = '#divDataRX';
+		dep[4] = '#divProbabilidadeTBClinicoRadiologica';
+		// Se sim, disponibilizar colunas listadas a cima
+		if($(this).val()=='sim'){
+			$().showFields(dep);
+		}
+		// Se nao, ocultar colunas listadas a cima
+		if($(this).val()=='nao'){
+			$().hideFields(dep);
+		}
+	});
 
 	$('#padrao').change(function(){
 

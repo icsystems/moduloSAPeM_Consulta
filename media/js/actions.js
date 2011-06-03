@@ -433,7 +433,8 @@ $(document).ready(function(){
 	//Make a clock in the page e write date in
 	//a portuguese format
 	$('#form_consulta').submit(function(){
-		$('#horarioFimEntrevista').val(getTime());
+		if ($('#horarioFimEntrevista').val() == '')
+			$('#horarioFimEntrevista').val(getTime());
 	});
 	$('#horarioInicioEntrevista').val(getTime());
 /*---------------------------------------------------------------------------------------------------------*/

@@ -238,6 +238,20 @@ $(document).ready(function(){
 			}
 		}
 	});
+
+	$('#dataTesteSensibilidade').datepicker({
+			dateFormat: 'dd MM yy',
+			monthNames: ['de Janeiro de','de Fevereiro de','de Março de','de Abril de','de Maio de','de Junho de','de Julho de','de Agosto de','de Setembro de','de Outubro de','de Novembro de','de Dezembro de'],
+			monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Aug','Set','Out','Nov','Dez'],
+			maxDate: '+0d',
+			changeMonth: true,
+			changeYear: true,
+			maxDate   : '+0y',
+			minDate   : '-2y',
+			yearRange : '-130:+130',
+			dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
+	});
+
 	$('#dataConsulta').writePortugueseDate();
 
 	$.fn.showFields = function(argumento){
@@ -424,6 +438,7 @@ $(document).ready(function(){
 	$('#realizadoTesteSensibilidade').change(function(){
 		var dep = new Array();
 		dep[0] = '#divRespostaTesteSensibilidade';
+		dep[1] = '#divDataTesteSensibilidade';
 		if($(this).val()=='sim')
 			$().showFields(dep);
 		else if ($(this).val()=='nao')
